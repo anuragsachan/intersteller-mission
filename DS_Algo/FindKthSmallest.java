@@ -9,17 +9,16 @@ class Main
 	// array using max-heap
 	public static int findKthSmallest(List<Integer> A, int k)
 	{
-		// create a max-heap using PriorityQueue class and
-		// insert first k elements of the array into the heap
+		// create a max-heap using PriorityQueue class
 		PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
     
-        //Iterate through the array list
+        //Iterate through the elements of array list
 		for (int i = 0; i < A.size(); i++)
 		{   
             //Add to PQ
 			pq.add(A.get(i));
 			
-			// if PriorityQueue's size is greater than k
+			// if PriorityQueue's size is greater than k, poll the priority queue
 			if (pq.size() > k) {
 				pq.poll();
 			}
