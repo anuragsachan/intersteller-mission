@@ -12,10 +12,11 @@ class Main
 		// create a max-heap using PriorityQueue class and
 		// insert first k elements of the array into the heap
 		PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
-	
-		// do for remaining array elements
+    
+        //Iterate through the array list
 		for (int i = 0; i < A.size(); i++)
-		{
+		{   
+            //Add to PQ
 			pq.add(A.get(i));
 			
 			// if PriorityQueue's size is greater than k
